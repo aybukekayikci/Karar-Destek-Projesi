@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Denge Psikiyatri Kliniği"/>
+    <meta name="keywords" content="Denge, Psikiyatri, Klinik"/>
+    <meta name="googlebot" content="noarchive"/>
+    <meta name="revisit-after" content="1 days"/>
+    <meta name="robots" content="index,contact"/>
+    <link href="giris.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<style>
+.cokurun #customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width:400px;
+  margin-left: 255px;
+  
+}
+
+.cokurun #customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.cokurun #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.cokurun #customers tr:hover {background-color: #ddd;}
+
+.cokurun #customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #52371ba6;
+  color: white;
+
+}
+.cokurun h1{
+  margin-left:275px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: initial;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.hicurun #customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width:400px;
+  margin-left: 215px;
+  
+}
+
+.hicurun #customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.hicurun #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.hicurun #customers tr:hover {background-color: #ddd;}
+
+.hicurun #customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #52371ba6;
+  color: white;
+
+}
+.hicurun h1{
+  margin-left: 240px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: initial;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.orta{
+    display: flex;
+}
+.oneri #customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width:400px;
+  margin-left:270px;
+  
+}
+
+.oneri #customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.oneri #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.oneri #customers tr:hover {background-color: #ddd;}
+
+.oneri #customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #52371ba6;
+  color: white;
+
+}
+.oneri h1{
+  margin-left: 295px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: initial;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.alt{
+    display: flex;
+}
+
+</style>
+
+<script>
+    window.onload = function () {
+    
+    var chart = new CanvasJS.Chart("chartContainer", {
+        theme: "light2",
+        animationEnabled: true,
+        title: {
+            text: "Ürünlerin Satış Oranları"
+        },
+
+        data: [{
+            type: "pie",
+            indexLabelFontSize: 18,
+            radius: 80,
+            indexLabel: "{label} - {y}",
+            yValueFormatString: "###0.0\"%\"",
+            click: explodePie,
+            dataPoints: [
+                { y: 42, label: "Gas" },
+                { y: 21, label: "Nuclear"},
+                { y: 24.5, label: "Renewable" },
+                { y: 9, label: "Coal" },
+                { y: 3.1, label: "Other Fuels" }
+            ]
+        }]
+    });
+    chart.render();
+    
+    function explodePie(e) {
+        for(var i = 0; i < e.dataSeries.dataPoints.length; i++) {
+            if(i !== e.dataPointIndex)
+                e.dataSeries.dataPoints[i].exploded = false;
+        }
+    }
+     
+    }
+    </script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <img class="logo" src="FRESH.png">
+      <a href="giris.html"><i class="fa fa-fw fa-home"></i>  Anasayfa</a>
+      <a href="sube.html"><i class="fa fa-fw fa-globe"></i>  Şube</a>
+      <a href="urun.html"><i class="fa fa-fw fa-shopping-bag"></i>  Ürünler</a>
+      <a href="musteri.html"><i class="fa fa-fw fa-user-o"></i>  Müşteri</a>
+
+    </div>
+
+    <div class="icon-bar">
+      <a href="#"><i class="fa fa-sign-out"></i></a>
+      <a href="profilim.html"><i class="fa fa-user-circle"></i></a>
+    </div>
+
+<div class="orta">
+    <div class="cokurun">
+        <h1>En Çok Satılan Ürünler</h1>
+        <table id="customers">
+  <tr>
+    <th>Ürün ID</th>
+    <th>Ürün Adı</th>
+    <th>Fiyat</th>
+    <th>Satış Sayısı</th>
+
+  </tr>
+  <tr>
+    <td>ID1</td>
+    <td>Urun1</td>
+    <td>Fiyat1</td>
+    <td>Sayı1</td>
+  </tr>
+  <tr>
+    <td>ID2</td>
+    <td>Urun2</td>
+    <td>Fiyat2</td>
+    <td>Sayı2</td>
+  </tr>
+  <tr>
+    <td>ID3</td>
+    <td>Urun3</td>
+    <td>Fiyat3</td>
+    <td>Sayı3</td>
+  </tr>
+  <tr>
+    <td>ID4</td>
+    <td>Urun4</td>
+    <td>Fiyat4</td>
+    <td>Sayı4</td>
+  </tr>
+  <tr>
+</table>
+    </div>
+
+    <div class="hicurun">
+        <h1>En Az Satılan Ürünler</h1>
+        <table id="customers">
+  <tr>
+    <th>Ürün ID</th>
+    <th>Ürün Adı</th>
+    <th>Fiyat</th>
+    <th>Satış Sayısı</th>
+
+  </tr>
+  <tr>
+    <td>ID1</td>
+    <td>Urun1</td>
+    <td>Fiyat1</td>
+    <td>Sayı1</td>
+  </tr>
+  <tr>
+    <td>ID2</td>
+    <td>Urun2</td>
+    <td>Fiyat2</td>
+    <td>Sayı2</td>
+  </tr>
+  <tr>
+    <td>ID3</td>
+    <td>Urun3</td>
+    <td>Fiyat3</td>
+    <td>Sayı3</td>
+  </tr>
+  <tr>
+    <td>ID4</td>
+    <td>Urun4</td>
+    <td>Fiyat4</td>
+    <td>Sayı4</td>
+  </tr>
+  <tr>
+</table>
+    </div>
+</div>
+<div class="alt">
+    <div id="chartContainer" style="width:600px; height: 250px; padding-top:40px; padding-left:140px; float: left; background-color: transparent;"></div>
+    <div class="oneri">
+            <h1>Satıştan kalkması gereken ürünler</h1>
+            <table id="customers">
+      <tr>
+        <th>Ürün ID</th>
+        <th>Ürün Adı</th>
+        <th>Fiyat</th>
+      </tr>
+      <tr>
+        <td>ID1</td>
+        <td>Urun1</td>
+        <td>Fiyat1</td>
+      </tr>
+      <tr>
+        <td>ID2</td>
+        <td>Urun2</td>
+        <td>Fiyat2</td>
+      </tr>
+      <tr>
+        <td>ID3</td>
+        <td>Urun3</td>
+        <td>Fiyat3</td>
+      </tr>
+      <tr>
+        <td>ID4</td>
+        <td>Urun4</td>
+        <td>Fiyat4</td>
+      </tr>
+      <tr>
+    </table>
+        </div>
+  </div>
+    
+    
+
+
+    
+  </body>
+</html>
