@@ -1,0 +1,414 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ body {
+  font-family: monospace;
+ }
+ a {
+  text-decoration: none;
+ }
+ li {
+  list-style: none;
+ }
+ .sidebar {
+  height: 100%;
+  width: 170px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#ffead4;
+  overflow-x: hidden;
+  padding-top: 120px;
+  box-shadow:0 0 30px rgba(97, 83, 109, 0.603);
+}
+
+/* Style sidebar links */
+.sidebar a {
+  padding: 40px 8px 6px 16px;
+  text-decoration: none;
+  font-size:16px;
+  color: #000000;
+  display: block;
+  font-weight: bold;
+  font-family:initial;
+  margin-left: 20px;
+}
+
+/* Style links on mouse-over */
+.sidebar a:hover {
+  color: #5f4319;
+  
+}
+
+/* Style the main content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.icon-bar {
+  width: 100%; /* Full-width */
+  background-color:#52371ba6; /* Dark-grey background */
+  overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+  float: right; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 15%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 25px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+  background-color: #000; /* Add a hover color */
+}
+.sidebar .logo{
+  border-radius: 50%;
+  height:150px;
+  width:150px;
+  object-fit: cover;
+  margin-left: 9px;
+  margin-top: -90px;
+}
+
+.orta .kutu{
+  display:flex;
+	flex-direction: column;
+	align-items: center;
+  justify-content: center;
+	padding: 10px;
+  background-color: #ffead48f;
+	margin-top: 20px;
+	margin-left:200px;
+	width: 470px;
+	height:263px;
+  border-radius: 20px;
+}
+.orta .kutu #chartContainer{
+  height: 450px;
+  width: 450px;
+
+}
+.orta .kutu #chartContainer2{
+  height: 450px;
+  width: 450px;
+}
+
+.orta{
+  display:flex;
+  flex-wrap:wrap;
+  }
+
+
+/* şube eklemeleri */
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 20px;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  height:34px;
+
+}
+body{
+
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  }
+  
+  div.table-title {
+   display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  }
+  
+  .table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+  }
+  
+  
+  /*** Table Styles **/
+  
+  .table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin-left: 200px;
+  margin-top: 10px;
+  padding:5px;
+  width:1120px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+  }
+  
+  th {
+  color:#ffffff;
+  background:#52371ba6;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:15px;
+  font-weight: 100;
+  padding:20px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+  }
+  
+  th:first-child {
+  border-top-left-radius:3px;
+  }
+  
+  th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+  }
+  
+  tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
+  color: black;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+  }
+  
+  tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+  }
+  
+  tr:first-child {
+  border-top:none;
+  }
+  
+  tr:last-child {
+  border-bottom:none;
+  }
+  
+  tr:nth-child(odd) td {
+  background:#EBEBEB;
+  }
+  
+  tr:nth-child(odd):hover td {
+  background:#4E5066;
+  }
+  
+  tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+  }
+  
+  tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+  }
+  
+  td {
+  background:#FFFFFF;
+  padding:3px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:16px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+  }
+  
+  td:last-child {
+  border-right: 0px;
+  }
+  
+  th.text-left {
+  text-align: left;
+  }
+  
+  th.text-center {
+    text-align: center;
+  }
+  
+  th.text-right {
+  text-align: right;
+  }
+  
+  td.text-left {
+  text-align: left;
+  }
+  
+  td.text-center {
+    text-align: center;
+  }
+  
+  td.text-right {
+  text-align: right;
+  }
+  .guncelUrun #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width:220px;
+    margin-left: 255px;
+    
+  }
+  
+  .guncelUrun #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .guncelUrun #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .guncelUrun #customers tr:hover {background-color: #ddd;}
+  
+  .guncelUrun #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #52371ba6;
+    color: white;
+  
+  }
+  .guncelUrun h1{
+    margin-left:275px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: initial;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .guncelSube #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width:220px;
+    margin-left: 215px;
+    
+  }
+  
+  .guncelSube #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .guncelSube #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .guncelSube #customers tr:hover {background-color: #ddd;}
+  
+  .guncelSube #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #52371ba6;
+    color: white;
+  
+  }
+  .guncelSube h1{
+    margin-left: 240px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: initial;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .orta{
+      display: flex;
+  }
+  .guncelMusteri #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width:220px;
+    margin-left: 215px;
+    
+  }
+  
+  .guncelMusteri #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .guncelMusteri #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .guncelMusteri #customers tr:hover {background-color: #ddd;}
+  
+  .guncelMusteri #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #52371ba6;
+    color: white;
+  
+  }
+  .guncelMusteri h1{
+    margin-left: 240px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: initial;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }

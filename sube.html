@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Denge Psikiyatri Kliniği"/>
+    <meta name="keywords" content="Denge, Psikiyatri, Klinik"/>
+    <meta name="googlebot" content="noarchive"/>
+    <meta name="revisit-after" content="1 days"/>
+    <meta name="robots" content="index,contact"/>
+    <link href="giris.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script>
+      window.onload = function () {
+      
+      var chart = new CanvasJS.Chart("chartContainer", {
+        theme: "light2",
+        animationEnabled: true,
+        title: {
+          text: "Şube Satış Oranları"
+        },
+    
+        data: [{
+          type: "pie",
+          indexLabelFontSize: 18,
+          radius: 80,
+          indexLabel: "{label} - {y}",
+          yValueFormatString: "###0.0\"%\"",
+          click: explodePie,
+          dataPoints: [
+            { y: 42, label: "Gas" },
+            { y: 21, label: "Nuclear"},
+            { y: 24.5, label: "Renewable" },
+            { y: 9, label: "Coal" },
+            { y: 3.1, label: "Other Fuels" }
+          ]
+        }]
+      });
+      chart.render();
+      
+      function explodePie(e) {
+        for(var i = 0; i < e.dataSeries.dataPoints.length; i++) {
+          if(i !== e.dataPointIndex)
+            e.dataSeries.dataPoints[i].exploded = false;
+        }
+      }
+       
+      var chart = new CanvasJS.Chart("chartContainer2", {
+	animationEnabled: true,
+	title:{
+		text: "Şubelere göre Planlnan Gerçek KAR"
+	},	
+	axisY: {
+		title: "Billions of Barrels",
+		titleFontColor: "#4F81BC",
+		lineColor: "#4F81BC",
+		labelFontColor: "#4F81BC",
+		tickColor: "#4F81BC"
+	},
+	axisY2: {
+		title: "Millions of Barrels/day",
+		titleFontColor: "#C0504E",
+		lineColor: "#C0504E",
+		labelFontColor: "#C0504E",
+		tickColor: "#C0504E"
+	},	
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor:"pointer",
+		itemclick: toggleDataSeries
+	},
+	data: [{
+		type: "column",
+		name: "Proven Oil Reserves (bn)",
+		legendText: "Proven Oil Reserves",
+		showInLegend: true, 
+		dataPoints:[
+			{ label: "Saudi", y: 266.21 },
+			{ label: "Venezuela", y: 302.25 },
+			{ label: "Iran", y: 157.20 },
+			{ label: "Iraq", y: 148.77 },
+			{ label: "Kuwait", y: 101.50 },
+			{ label: "UAE", y: 97.8 }
+		]
+	},
+	{
+		type: "column",	
+		name: "Oil Production (million/day)",
+		legendText: "Oil Production",
+		axisYType: "secondary",
+		showInLegend: true,
+		dataPoints:[
+			{ label: "Saudi", y: 10.46 },
+			{ label: "Venezuela", y: 2.27 },
+			{ label: "Iran", y: 3.99 },
+			{ label: "Iraq", y: 4.45 },
+			{ label: "Kuwait", y: 2.92 },
+			{ label: "UAE", y: 3.1 }
+		]
+	}]
+});
+chart.render();
+
+function toggleDataSeries(e) {
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	}
+	else {
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+
+var chart = new CanvasJS.Chart("chartContainer3", {
+	theme: "dark1",
+	animationEnabled: true,
+	title: {
+		text: "Shares of Electricity Generation by Fuel"
+	},
+	subtitles: [{
+		text: "United Kingdom, 2016",
+		fontSize: 16
+	}],
+	data: [{
+		type: "pie",
+		indexLabelFontSize: 18,
+		radius: 80,
+		indexLabel: "{label} - {y}",
+		yValueFormatString: "###0.0\"%\"",
+		click: explodePie,
+		dataPoints: [
+			{ y: 42, label: "Gas" },
+			{ y: 21, label: "Nuclear"},
+			{ y: 24.5, label: "Renewable" },
+			{ y: 9, label: "Coal" },
+			{ y: 3.1, label: "Other Fuels" }
+		]
+	}]
+});
+chart.render();
+
+function explodePie(e) {
+	for(var i = 0; i < e.dataSeries.dataPoints.length; i++) {
+		if(i !== e.dataPointIndex)
+			e.dataSeries.dataPoints[i].exploded = false;
+	}
+}
+ 
+}
+      </script>
+    
+  </head>
+  <body>
+    <div class="sidebar">
+      <img class="logo" src="FRESH.png">
+      <a href="giris.html"><i class="fa fa-fw fa-home"></i>  Anasayfa</a>
+      <a href="sube.html"><i class="fa fa-fw fa-globe"></i>  Şube</a>
+      <a href="urunler.html"><i class="fa fa-fw fa-shopping-bag"></i>  Ürünler</a>
+      <a href="musteri.html"><i class="fa fa-fw fa-user-o"></i>  Müşteri</a>
+      <a href="calisan.html"><i class="fa fa-fw fa-group"></i>  Personel</a>
+    </div>
+
+    <div class="icon-bar">
+      <a href="#"><i class="fa fa-sign-out"></i></a>
+      <a href="profilim.html"><i class="fa fa-user-circle"></i></a>
+      <a href="#"><i class="fa fa-bell-o"></i></a>
+      
+    </div>
+
+    <div class="orta">
+      <div class="kutu">
+        <div id="chartContainer"></div>
+      </div>
+
+      <div class="kutu">
+        <div id="chartContainer2"></div>
+      </div>
+     
+    </div>
+
+    <table border="1" class="table-fill">
+      <thead>
+          <tr>
+              <th><b>Şube Adı</b></th>
+              <th><b>Şube Adresi</b></th>
+              <th><b>Şube Maili</b></th>
+              <th><b>Şube İrtibat</b></th>
+              <th><b>Şube Yöneticisi</b></th>
+              <th><b>Şube Yöneticisi İrtibat</b></th>
+              <th><b>Güncelle</b></th>
+              <th><b>Sil</b></th>
+          </tr>
+      </thead>
+          
+      <?php
+      
+      include("vtbaglan.php"); /*vtbaglan.php sayfasındaki tüm kodları bu sayfaya çağırdık*/
+      
+      
+      
+      
+      
+      $sorgu= mysqli_query($vtbaglan,"SELECT sube.subeID, sube.subeAd, sube.subeAdres, sube.Mail, sube.SubeNo, sube.subeYonetici, sube.yoneticiCep
+      FROM sube
+      while($satir = mysqli_fetch_assoc($sorgu)){
+          echo '<tr>';
+          echo '<td>'.$satir['subeAd'].'</td>';
+          echo '<td>'.$satir['subeAdres'].'</td>';
+          echo '<td>'.$satir['subeMail'].'</td>';
+          echo '<td>'.$satir['subeNo'].'</td>';
+          echo '<td>'.$satir['subeYonetici'].'</td>';
+          echo '<td>'.$satir['yoneticiCep'].'</td>';
+          echo '<td> <a href="subeguncelleformu.html?id='.$satir['id'].'" >Güncelle</a></td>';
+          echo '<td> <a href="subeekle.html?id='.$satir['id'].'">Sil</a> </td>';
+          echo '<tr>';	
+      }
+  
+      ?>
+
+    </table>
+
+    
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+    <head>
+        <title>Fresh Decor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: #d89e58;
+}
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    border-radius: 24px;
+    text-align: center;
+}
+
+
+img.yuvarlak {
+    height: 200px;
+    width: 200px;
+}
+
+.box input[type="text"],.box input[type="password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #d6b937;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box input[type=text]:focus,.box input[type="password"]:focus{
+    width: 280px;
+    border-color: #643c1b;
+}
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #643c1b;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+
+
+.box input[type="submit"]:hover{
+    background: #caa173;
+}
+#cbox{
+    color: #757575;
+}
+
+        </style>
+    </head>
+    <body>
+        <form class="box" action="giris.html" method="POST">
+            <img src="FRESH.png" alt="" class="yuvarlak" />
+            <h2><font face="Monospace" color="white">Yönetici Paneli</font></h2>
+            <?php
+            if (isset($_GET['login'])=="no") {
+            echo "Kullanıcı bulunamadı...";
+            }
+        ?>
+            <input type="text" name="kullaniciMail" placeholder="Mail Adresi:">
+            <input type="password" name="kullaniciSifre" placeholder="Şifre:">
+            <input type="submit" name="giris" value="Giriş">
+            <input type="submit" name="sifreU" value="Şifremi Unuttum">
+        </form>
+    </body>
+</html>
